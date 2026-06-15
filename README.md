@@ -103,3 +103,20 @@ export function OpenModalButton() {
 ```
 
 See `docs/MODALS.md` and `examples/global-modal-flow.md` for the original Bumicerts usage guide.
+
+## Demo app
+
+This repository includes a deployable Next.js documentation/demo app in `apps/demo`.
+It installs the modal files through the shadcn registry, so it also acts as a registry smoke test.
+
+```bash
+cd apps/demo
+bun install
+bun dev
+```
+
+For Vercel, set the project root directory to:
+
+```txt
+apps/demo
+```

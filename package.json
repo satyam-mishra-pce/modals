@@ -5,7 +5,10 @@
   "description": "Copy-paste responsive modal stack components extracted from Bumicerts.",
   "type": "module",
   "scripts": {
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "demo:dev": "bun --cwd apps/demo dev",
+    "demo:build": "bun --cwd apps/demo build",
+    "demo:check": "bun --cwd apps/demo typecheck && bun --cwd apps/demo lint"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.15",
