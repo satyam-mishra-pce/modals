@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Bricolage_Grotesque, Geist_Mono } from "next/font/google"
+import { Bricolage_Grotesque, Geist_Mono, Instrument_Serif } from "next/font/google"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { ModalProvider } from "@/components/ui/modal/context"
@@ -11,15 +11,22 @@ const display = Bricolage_Grotesque({
   variable: "--font-sans",
 })
 
+const serif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument",
+})
+
 const mono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
 
 export const metadata: Metadata = {
-  title: "Modals — shadcn registry demo",
+  title: "Modals — a responsive modal stack for shadcn",
   description:
-    "Documentation and live demos for the copy-paste responsive modal stack.",
+    "Copy-paste responsive modal stack components. One body renders as a Radix dialog on desktop and a Vaul drawer on mobile, with stacked flows and a tiny provider API.",
 }
 
 export default function RootLayout({
@@ -31,7 +38,12 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("font-sans antialiased", display.variable, mono.variable)}
+      className={cn(
+        "dark font-sans antialiased",
+        display.variable,
+        serif.variable,
+        mono.variable,
+      )}
     >
       <body>
         <ThemeProvider>
