@@ -1,0 +1,71 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "modals",
+  "homepage": "https://github.com/satyam-mishra-pce/modals",
+  "items": [
+    {
+      "name": "modals",
+      "type": "registry:block",
+      "title": "Responsive Modal Stack",
+      "description": "A copy-paste responsive modal stack that renders as a dialog on desktop and drawer on mobile.",
+      "author": "Satyam Mishra <https://github.com/satyam-mishra-pce>",
+      "dependencies": [
+        "@radix-ui/react-dialog",
+        "framer-motion",
+        "lucide-react",
+        "radix-ui",
+        "vaul"
+      ],
+      "registryDependencies": [
+        "button"
+      ],
+      "files": [
+        {
+          "path": "components/ui/modal/AnimateChangeInHeight.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/AnimateChangeInHeight.tsx"
+        },
+        {
+          "path": "components/ui/modal/ModalWrapper.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/ModalWrapper.tsx"
+        },
+        {
+          "path": "components/ui/modal/context.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/context.tsx"
+        },
+        {
+          "path": "components/ui/modal/dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/dialog.tsx"
+        },
+        {
+          "path": "components/ui/modal/drawer.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/drawer.tsx"
+        },
+        {
+          "path": "components/ui/modal/modal.tsx",
+          "type": "registry:ui",
+          "target": "@ui/modal/modal.tsx"
+        },
+        {
+          "path": "components/ui/modal/use-current-modal-info.ts",
+          "type": "registry:ui",
+          "target": "@ui/modal/use-current-modal-info.ts"
+        },
+        {
+          "path": "hooks/use-media-query.ts",
+          "type": "registry:hook",
+          "target": "@hooks/use-media-query.ts"
+        },
+        {
+          "path": "lib/logger.ts",
+          "type": "registry:lib",
+          "target": "@lib/logger.ts"
+        }
+      ]
+    }
+  ]
+}

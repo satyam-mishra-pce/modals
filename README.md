@@ -4,7 +4,31 @@ Copy-paste responsive modal stack components extracted from the Bumicerts app.
 
 This is **not** an npm package. Copy the files into your app like shadcn components.
 
-## Copy files
+## Install with shadcn
+
+Run this in a shadcn-ready app:
+
+```bash
+npx shadcn@latest add https://raw.githubusercontent.com/satyam-mishra-pce/modals/main/registry/modals.json
+```
+
+Or add this registry to `components.json`:
+
+```json
+{
+  "registries": {
+    "@modals": "https://raw.githubusercontent.com/satyam-mishra-pce/modals/main/registry/{name}.json"
+  }
+}
+```
+
+Then install with:
+
+```bash
+npx shadcn@latest add @modals/modals
+```
+
+## Copy files manually
 
 Copy these paths into your project:
 
@@ -18,7 +42,9 @@ lib/logger.ts
 
 If your app already has `components/ui/button.tsx`, `lib/utils.ts`, or a media-query hook, you can keep yours and adjust imports.
 
-## Install dependencies
+## Install dependencies manually
+
+The shadcn registry installs dependencies for you. If copying manually, install:
 
 ```bash
 bun add @radix-ui/react-dialog class-variance-authority clsx framer-motion lucide-react radix-ui tailwind-merge vaul
